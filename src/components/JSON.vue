@@ -11,7 +11,11 @@
       <h3>Iterating through Arrays</h3>
       <!-- Activity 6: Render a list containing author names and their birth years -->
       <ul class="list-disc pl-6 space-y-1">
-        <li v-for="author in authors" :key="author.id">
+        <li 
+          v-for="author in authors" 
+          :key="author.id"
+          :class="{ highlight: author.name === 'George Orwell' }"
+        >
           {{ author.name }} ({{ author.birthYear }})
         </li>
       </ul>
@@ -99,11 +103,11 @@
       <p>Toggle visibility based on a condition.</p>
       <!-- Activity 13: Toggle the message visibility when the button is clicked. -->
       <!-- TODO: CODE TO TOGGLE MESSAGE VISIBILITY HERE. Hint: Use the v-if directive. -->
-<button @click="showMessage = !showMessage">Toggle Message</button>
-<p v-if="showMessage" class="message success">
-  ✨ You're a Vue superstar! ✨
-</p>
-<p v-else class="message">Click the button to see a message.</p>
+      <button @click="showMessage = !showMessage">Toggle Message</button>
+      <p v-if="showMessage" class="message success">
+        ✨ You're a Vue superstar! ✨
+      </p>
+      <p v-else class="message">Click the button to see a message.</p>
     </section>
 
     <section class="lab-section">
