@@ -2,12 +2,11 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import JSON from './components/JSON.vue';
+import Form from './components/Form.vue'
 </script>
 
 <template>
-  <div class="container mx-auto p-4">
-    <JSON />
-  </div>
+    <Form/>
 </template>
 
 
